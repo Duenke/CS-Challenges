@@ -27,18 +27,30 @@ namespace ConvertStandardToMilitaryTime
 
             Console.WriteLine("ConvertStandardToMilitaryTime");
             Console.WriteLine();
+            Console.WriteLine("Given a string representing a standard 12hr time format, return a military 24hr format string.\n");
 
             string time12 = "7:00 am";
             string time24 = ConvertTo24(time12);
-            Console.WriteLine($"[{time12}] converted to 24hr time format is [{time24}]");
+            Console.WriteLine($"[{time12}] converted to 24hr time format is [{time24}]\n");
 
             time12 = "12:00 am";
             time24 = ConvertTo24(time12);
-            Console.WriteLine($"[{time12}] converted to 24hr time format is [{time24}]");
+            Console.WriteLine($"[{time12}] converted to 24hr time format is [{time24}]\n");
 
             time12 = "12:00 pm";
             time24 = ConvertTo24(time12);
-            Console.WriteLine($"[{time12}] converted to 24hr time format is [{time24}]");
+            Console.WriteLine($"[{time12}] converted to 24hr time format is [{time24}]\n");
+            try
+            {
+                Console.Write("Check a custom time in the same format: ");
+                time12 = Console.ReadLine();
+                time24 = ConvertTo24(time12);
+                Console.WriteLine($"\n[{time12}] converted to 24hr time format is [{time24}]\n");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
             Console.ReadKey();
         }
@@ -81,7 +93,7 @@ namespace ConvertStandardToMilitaryTime
         {
             foreach (string i in s)
             {
-                Console.Write("{0} ", i);
+                Console.Write(i);
             }
         }
     }
