@@ -12,7 +12,7 @@ namespace RouletteGame
         {
             /*
             Write a console app that simulates an American Roulette game. Spin the wheel and return all the winning bets for the spin.
-            
+
             In-puts / Out-puts:
             Straight: "12" / You Win!
             Split: "12, 15" / You Lose!
@@ -45,7 +45,7 @@ namespace RouletteGame
             {
                 Console.Write("Enter your bet here: ");
                 string bet = Console.ReadLine();
-                randNum = 37;//rnd.Next(0, 37);
+                randNum = rnd.Next(0, 37);
                 Console.WriteLine("The croupier spins the wheel in one direction, then spins the ball in the opposite direction!\n" +
                     $"The ball lands on: {num[randNum]}!\n");
                 Console.WriteLine($"The Straight winner is: {Util.GetStraight(randNum, num, col)}\n" +

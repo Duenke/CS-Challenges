@@ -117,12 +117,11 @@ namespace RouletteGame
 
         public static string GetColumn(int x, int[] y, char[] z)
         {
-            if (y[x] == 1 || y[x] == 4 || y[x] == 7 || y[x] == 10 || y[x] == 13 || y[x] == 16 || y[x] == 19 || y[x] == 22 || y[x] == 25 || y[x] == 28 || y[x] == 31 || y[x] == 34)
+            int g = y[x];
+            if ((g % 3) == 1)
                 return "1st Column";
-            else if (y[x] == 2 || y[x] == 5 || y[x] == 8 || y[x] == 11 || y[x] == 14 || y[x] == 17 || y[x] == 20 || y[x] == 23 || y[x] == 26 || y[x] == 29 || y[x] == 32 || y[x] == 35)
+            else if (g % 3 == 2)
                 return "2nd Column";
-            else if (y[x] == 0 || y[x] == 37)
-                return "Zero! House Wins!";
             else
                 return "3rd Column";
         }
