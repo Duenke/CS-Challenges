@@ -13,12 +13,15 @@ namespace RouletteGame
             /*
             Write a console app that simulates an American Roulette game. Spin the wheel and return all the winning bets for the spin.
 
+            Constraints:
+            - The game must accept all qualifying bets from American roulette.
+
             In-puts / Out-puts:
-            Straight: "12" / You Win!
-            Split: "12, 15" / You Lose!
-            Street: "4, 5, 6" / You Win!
-            'Red' Black: "Red" / You Lose!
-            Columns: "1st Column" / House Wins!
+            - Straight: "12" / You Win!
+            - Split: "12, 15" / You Lose!
+            - Street: "4, 5, 6" / You Win!
+            - 'Red' Black: "Red" / You Lose!
+            - Columns: "1st Column" / House Wins!
 
             Logical Approach:
             - Build an array representing the wheel with 38 slots.
@@ -29,8 +32,7 @@ namespace RouletteGame
             - Implement winning and losing money.
             */
 
-            Console.WriteLine("ConvertStandardToMilitaryTime");
-            Console.WriteLine();
+            Console.WriteLine("RouletteGame");
             Console.WriteLine("Welcome to Casino Royale!\n" +
                 "You have five chances to win. Each bet is $100, and you'll start with $500.\n");
 

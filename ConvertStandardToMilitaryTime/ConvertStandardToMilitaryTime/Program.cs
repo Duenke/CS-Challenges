@@ -5,14 +5,18 @@ namespace ConvertStandardToMilitaryTime
     class Program
     {
         static void Main(string[] args)
-        {            
+        {
             /*
             Given a string representing a standard 12hr time format, return a military 24hr format string.
-            
+
+            Constraints:
+            - The string will be formatted "hour:minutes am/pm"
+            - The string will not be NULL.
+
             In-puts / Out-puts:
-            "7:00 am" / "0700"
-            "12:00 am" / "0000"
-            "12:00 pm" / "1200"
+            - "7:00 am" / "0700"
+            - "12:00 am" / "0000"
+            - "12:00 pm" / "1200"
 
             Logical Approach:
             - Split given string into three parts; hour, time, and am/pm.
@@ -26,7 +30,6 @@ namespace ConvertStandardToMilitaryTime
             */
 
             Console.WriteLine("ConvertStandardToMilitaryTime");
-            Console.WriteLine();
             Console.WriteLine("Given a string representing a standard 12hr time format, return a military 24hr format string.\n");
 
             string time12 = "7:00 am";
