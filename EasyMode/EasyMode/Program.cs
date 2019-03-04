@@ -4,12 +4,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SwapWithoutTemp
+namespace EasyMode
 {
     class Program
     {
         static void Main(string[] args)
         {
+            /*
+            Given an integer of any size, sum the numbers of the integer.
+
+            Constraints:
+            - IReadOnlyCollection positive integers.
+
+            In-puts / Out-puts:
+            - 17 / 8
+            - 123 / 6
+            - 123456789 / 
+            */
+
+            Console.WriteLine("SumNumbersInAnInteger");
+            Console.WriteLine("Given an integer of any size, sum the numbers of the integer.\n");
+
+            int n = 123456789;
+            int acc = 0;
+
+            Console.WriteLine($"The integer {n} summed is: ");
+            while (n > 0)
+            {
+                acc += n % 10;
+                n = n / 10;
+            }
+
+            Console.WriteLine(acc);
+
+            Console.WriteLine("-----------------------------");
+
             /*
             Given two integer variables, swap their value without using a "temp" variable.
 
@@ -37,7 +66,7 @@ namespace SwapWithoutTemp
             Console.WriteLine($"Integer a is: {a}.\n" +
                 $"Integer b is: {b}.\n");
 
-            Console.WriteLine("Do magic.\n");
+            Console.WriteLine("Do math.\n");
 
             a = a + b;
             b = a - b;

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SwapWithoutTemp")]
+[assembly: AssemblyTitle("EasyMode")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SwapWithoutTemp")]
+[assembly: AssemblyProduct("EasyMode")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("cbd18ab3-8e9e-4120-9fe6-2d8f4e4237c6")]
+[assembly: Guid("c2d4b73d-1e6e-4d92-9abb-e12e5495bb18")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CBD18AB3-8E9E-4120-9FE6-2D8F4E4237C6}</ProjectGuid>
+    <ProjectGuid>{C2D4B73D-1E6E-4D92-9ABB-E12E5495BB18}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SwapWithoutTemp</RootNamespace>
-    <AssemblyName>SwapWithoutTemp</AssemblyName>
+    <RootNamespace>EasyMode</RootNamespace>
+    <AssemblyName>EasyMode</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
