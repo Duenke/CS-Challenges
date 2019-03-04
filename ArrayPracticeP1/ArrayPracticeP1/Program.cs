@@ -104,6 +104,34 @@ namespace ArrayPracticeP1
             Console.WriteLine($"The largest value in int[] b is: {GetMax(b)}.");
             Console.WriteLine($"The largest value in int[] c is: {GetMax(c)}.");
 
+            Console.WriteLine("-----------------------------");
+
+            /*
+            Given a character array of any size, randomly populate it with half A and half Z characters.
+
+            Constraints:
+            - The array must be equal parts A and Z.
+            - The array size will be an even number.
+            - The array must be populated randomly A or Z.
+            
+            In-puts / Out-puts:
+
+            Logical Approach:
+            - Create a char[].
+            - Use loops to populate the array.
+            - Use random.next to randomly choose between A and Z.
+            - Decrement counters for A and Z each time they are placed to insure equality.
+            */
+
+            Console.WriteLine("PickTeams");
+            Console.WriteLine("Given a character array of any size, randomly populate it with half A and half Z characters.\n");
+
+            int gameSize = 100;
+
+            char[] players = PickTeams(gameSize);
+
+            PrintArray(players);
+
             Console.ReadKey();
         }
     }
