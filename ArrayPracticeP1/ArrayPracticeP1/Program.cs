@@ -40,6 +40,8 @@ namespace ArrayPracticeP1
             Console.WriteLine($"{t} is a palindrome: {CheckPalindrome(t)}");
             Console.WriteLine($"{u} is a palindrome: {CheckPalindrome(u)}");
 
+            Console.ReadKey();
+
             Console.WriteLine("-----------------------------");
 
             /*
@@ -71,6 +73,8 @@ namespace ArrayPracticeP1
             Console.WriteLine($"The smallest value in int[] a is: {GetMin(a)}.");
             Console.WriteLine($"The smallest value in int[] b is: {GetMin(b)}.");
             Console.WriteLine($"The smallest value in int[] c is: {GetMin(c)}.");
+
+            Console.ReadKey();
 
             Console.WriteLine("-----------------------------");
 
@@ -104,6 +108,8 @@ namespace ArrayPracticeP1
             Console.WriteLine($"The largest value in int[] b is: {GetMax(b)}.");
             Console.WriteLine($"The largest value in int[] c is: {GetMax(c)}.");
 
+            Console.ReadKey();
+
             Console.WriteLine("-----------------------------");
 
             /*
@@ -115,6 +121,8 @@ namespace ArrayPracticeP1
             - The array must be populated randomly A or Z.
             
             In-puts / Out-puts:
+            - 100 / 50 As and 50 Zs
+            - 50 / 25 As and 25 Zs
 
             Logical Approach:
             - Create a char[].

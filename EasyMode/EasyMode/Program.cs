@@ -37,6 +37,8 @@ namespace EasyMode
 
             Console.WriteLine(acc);
 
+            Console.ReadKey();
+
             Console.WriteLine("-----------------------------");
 
             /*
@@ -76,6 +78,79 @@ namespace EasyMode
                 $"Integer b is: {b}.");
 
             Console.ReadKey();
+
+            Console.WriteLine("-----------------------------");
+
+            /*
+            Given an integer, create a staircase with the same base width and height using spaces and # symbols.
+
+            Constraints:
+            - Input integer between 0 and 100.
+
+            In-puts / Out-puts:
+            - 3 /
+              #
+             ##
+            ###
+            - 5 /
+                #
+               ##
+             ####
+            #####
+
+            Logical Approach:
+            - Create some loops that will write the appropriate number of spaces and # symbols per line.
+            */
+
+            Console.WriteLine("Staircase");
+            Console.WriteLine("Given an integer, create a staircase with the same base width and height using spaces and # symbols.\n");
+
+            n = 10;
+            int startingN = n;
+
+            while (n > 0)
+            {
+                int spaces = n - 1;
+                int hashes = startingN - spaces;
+
+                while (spaces > 0)
+                {
+                    Console.Write(" ");
+                    spaces--;
+                }
+                while (hashes > 0)
+                {
+                    Console.Write("#");
+                    hashes--;
+                }
+                Console.WriteLine();
+                n--;
+            }
+
+            Console.ReadKey();
+
+            Console.WriteLine("-----------------------------");
+
+            /*
+            Given 
+
+            Constraints:
+            - 
+
+            In-puts / Out-puts:
+            - 
+
+            Logical Approach:
+            - 
+            
+
+            Console.WriteLine(" ");
+            Console.WriteLine(" \n");
+
+
+
+            Console.ReadKey(); */
+
         }
     }
 }
