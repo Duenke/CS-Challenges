@@ -138,6 +138,7 @@ namespace ArrayPracticeP1
 
             char[] players = PickTeams(gameSize);
 
+            Console.WriteLine("The players were picked in this order:");
             PrintArray(players);
 
             Console.ReadKey();
