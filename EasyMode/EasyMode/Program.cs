@@ -149,8 +149,9 @@ namespace EasyMode
 
 
 
-            Console.ReadKey(); */
+            Console.ReadKey();
 
+            Console.WriteLine("-----------------------------"); */
         }
     }
 }
