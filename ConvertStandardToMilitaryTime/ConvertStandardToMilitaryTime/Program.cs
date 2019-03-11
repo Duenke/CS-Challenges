@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace ConvertStandardToMilitaryTime
 {
@@ -56,8 +57,84 @@ namespace ConvertStandardToMilitaryTime
             }
 
             Console.ReadKey();
+
+            Console.WriteLine("Another version to meet HackerRank syntax.\n");
+
+            time12 = "07:35:45AM";
+            time24 = timeConversion(time12);
+            Console.WriteLine($"[{time12}] converted to 24hr time format is [{time24}]\n");
+
+            time12 = "12:14:22AM";
+            time24 = timeConversion(time12);
+            Console.WriteLine($"[{time12}] converted to 24hr time format is [{time24}]\n");
+
+            time12 = "12:41:36PM";
+            time24 = timeConversion(time12);
+            Console.WriteLine($"[{time12}] converted to 24hr time format is [{time24}]\n");
+
+            try
+            {
+                Console.Write("Check a custom time in the same format: ");
+                time12 = Console.ReadLine();
+                time24 = timeConversion(time12);
+                Console.WriteLine($"\n[{time12}] converted to 24hr time format is [{time24}]\n");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.ReadKey();
         }
 
+        static string timeConversion(string s)
+        {
+            string[] separators = { ":", "AM", "PM" };
+            string[] tempArr = s.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+            char AmPm = s[8];
+            int hour = int.Parse(tempArr[0]);
+            string mins = tempArr[1];
+            string secs = tempArr[2];
+            StringBuilder tempSB = new StringBuilder();
+
+            if (s[8] is 'A' && hour == 12)
+            {
+                hour = 0;
+                tempSB.Append(0);
+                tempSB.Append(hour);
+                tempSB.Append(':');
+                tempSB.Append(mins);
+                tempSB.Append(':');
+                tempSB.Append(secs);
+            }
+            else if (s[8] is 'P' && hour < 12)
+            {
+                hour += 12;
+                tempSB.Append(hour);
+                tempSB.Append(':');
+                tempSB.Append(mins);
+                tempSB.Append(':');
+                tempSB.Append(secs);
+            }
+            else if (s[8] is 'A' && hour < 10)
+            {
+                tempSB.Append(0);
+                tempSB.Append(hour);
+                tempSB.Append(':');
+                tempSB.Append(mins);
+                tempSB.Append(':');
+                tempSB.Append(secs);
+            }
+            else
+            {
+                tempSB.Append(hour);
+                tempSB.Append(':');
+                tempSB.Append(mins);
+                tempSB.Append(':');
+                tempSB.Append(secs);
+            }
+            return tempSB.ToString();
+        }
         private static string ConvertTo24(string time1)
         {
             string[] time2 = time1.Split(' ', ':');
