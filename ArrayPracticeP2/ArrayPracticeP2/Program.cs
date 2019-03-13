@@ -79,9 +79,79 @@ namespace ArrayPracticeP2
             sub = "TEA";
             SubStringCheck(main, sub);
 
+            Console.ReadKey();
+
+            Console.WriteLine("-----------------------------");
+
+            /*
+            Given a sentence as a string, return the longest word in the string. Ignore special characters and spaces. If two words are the same length, return the first word.
+
+            Constraints:
+            - Strings will not be null.
+            - Srtings will not contain numbers.
+
+            In-puts / Out-puts:
+            - Hello World / Hello
+            - I Love Dogs / Love
+            - Fun &!! Time / Time
+
+            Logical Approach:
+            - Split the main string into a string[].
+            - Assign the first element to MAX variable.
+            - Compare length of each element to MAX variable.
+            - Keep and return the longest element.
+            */
+
+            Console.WriteLine("MaxString");
+            Console.WriteLine("Given a sentence as a string, return the longest word in the string. Ignore special characters and spaces. If two words are the same length, return the first word.\n");
+
+            string input = "Hello World";
+            string output = MaxString(input);
+            Console.WriteLine(output);
+
+            input = "I Love Dogs";
+            output = MaxString(input);
+            Console.WriteLine(output);
+
+            input = "Fun &!! Time";
+            output = MaxString(input);
+            Console.WriteLine(output);
+
+            Console.ReadKey(); 
+            
+            Console.WriteLine("-----------------------------");
+
+            /*
+            Given a sentence as a string, counts the number of vowels in the text.
+
+            Constraints:
+            - Srting will not be null.
+
+            In-puts / Out-puts:
+            - "The quick brown fox jumps over the lazy dog." / 11 vowels
+            - "Kindra, Malachi, and Jacob are left on the island." / 15 vowels
+
+            Logical Approach:
+            - Create an array holding all possible vowels(not Y).
+            - Loop through the sentence as an array, checking each character for a vowel.
+            - Increment a vowelCount integer.
+            - Return vowelCount.
+            */
+
+            Console.WriteLine("VowelCount");
+            Console.WriteLine("Given a sentence as a string, counts the number of vowels in the text.\n");
+
+            string sentence = "The quick brown fox jumps over the lazy dog.";
+            int vowelCount = VowelCount(sentence);
+            Console.WriteLine($"There are ({vowelCount}) vowels in '{sentence}'.");
+
+            sentence = "Kindra, Malachi, and Jacob are left on the island.";
+            vowelCount = VowelCount(sentence);
+            Console.WriteLine($"There are ({vowelCount}) vowels in '{sentence}'.");
+
             Console.ReadKey(); 
 
-            Console.WriteLine("-----------------------------"); 
+            Console.WriteLine("-----------------------------");
 
             /*
             Given 
@@ -94,7 +164,7 @@ namespace ArrayPracticeP2
 
             Logical Approach:
             - 
-            
+
 
             Console.WriteLine(" ");
             Console.WriteLine(" \n");
@@ -102,7 +172,7 @@ namespace ArrayPracticeP2
 
 
             Console.ReadKey(); 
-            
+
             Console.WriteLine("-----------------------------"); */
         }
     }

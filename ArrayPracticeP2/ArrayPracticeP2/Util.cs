@@ -2,8 +2,47 @@
 
 namespace ArrayPracticeP2
 {
-    class Util
+    public class Util
     {
+        /// <summary>
+        /// Counts and returns the number of vowels in a string.
+        /// </summary>
+        /// <param name="sentence"></param>
+        /// <returns>int</returns>
+        public static int VowelCount(string sentence)
+        {
+            char[] vowels = new char[] { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
+            int vowelCount = 0;
+            for (int i = 0; i < sentence.Length; i++)
+                for (int j = 0; j < vowels.Length; j++)
+                    if (sentence[i] == vowels[j])
+                        vowelCount++;
+            return vowelCount;
+        }
+
+        /// <summary>
+        /// Finds and returns the longest word in a sentence.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>string</returns>
+        public static string MaxString(string input)
+        {
+            string[] arr = input.Split(' ', '.', '!', '?', '&');
+            string max = arr[0];
+
+            for (int i = 0; i < arr.Length; i++)
+                if (max.Length < arr[i].Length)
+                    max = arr[i];
+
+            return max;
+        }
+
+        /// <summary>
+        /// Checks a string "main" for the sub string "sub", and prints the index where "sub" starts in "main".
+        /// If "sub" does not exist in "main", prints as such.
+        /// </summary>
+        /// <param name="main"></param>
+        /// <param name="sub"></param>
         public static void SubStringCheck(string main, string sub)
         {
             int index = -1;
