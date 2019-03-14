@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SQLite;
+using System.IO;
 
 namespace SQLiteDemo
 {
@@ -112,8 +113,13 @@ namespace SQLiteDemo
 
         private static SQLiteConnection CreateConnection()
         {
-            SQLiteConnection connection = new SQLiteConnection("Data Source = ./database.db; New = True; Compress = True;");
+            SQLiteConnection connection = new SQLiteConnection("Data Source = database.db");
             
+            if (!File.Exists("./database.db"))
+            {
+                SQLiteConnection.CreateFile("database.db");
+                Console.WriteLine("Database file created...");
+            }
             try
             {
                 connection.Open();
