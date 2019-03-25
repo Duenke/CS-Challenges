@@ -5,6 +5,33 @@ namespace ArrayPracticeP2
     public class Util
     {
         /// <summary>
+        /// Rounds grades up in an int[] to the next multiple of 5 if they within 2 points.
+        /// </summary>
+        /// <param name="grades"></param>
+        /// <returns>int[]</returns>
+        public static int[] GradingStudents(int[] grades)
+        {
+            int[] curvedGrades = new int[grades.Length];
+            for (int i = 0; i < grades.Length; i++)
+            {
+                if (grades[i] < 68)
+                {
+                    curvedGrades[i] = grades[i];
+                }
+                else if (grades[i] % 5 > 2)
+                {
+                    int newGrade = grades[i] + (5 - grades[i] % 5);
+                    curvedGrades[i] = newGrade;
+                }
+                else
+                {
+                    curvedGrades[i] = grades[i];
+                }
+            }
+            return curvedGrades;
+        }
+
+        /// <summary>
         /// Counts and returns the number of vowels in a string.
         /// </summary>
         /// <param name="sentence"></param>
@@ -14,9 +41,16 @@ namespace ArrayPracticeP2
             char[] vowels = new char[] { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
             int vowelCount = 0;
             for (int i = 0; i < sentence.Length; i++)
+            {
                 for (int j = 0; j < vowels.Length; j++)
+                {
                     if (sentence[i] == vowels[j])
+                    {
                         vowelCount++;
+                    }
+                }
+            }
+
             return vowelCount;
         }
 
@@ -31,8 +65,12 @@ namespace ArrayPracticeP2
             string max = arr[0];
 
             for (int i = 0; i < arr.Length; i++)
+            {
                 if (max.Length < arr[i].Length)
+                {
                     max = arr[i];
+                }
+            }
 
             return max;
         }
@@ -54,7 +92,9 @@ namespace ArrayPracticeP2
                 for (int j = match; j < sub.Length; j++)
                 {
                     if (match == sub.Length)
+                    {
                         break;
+                    }
                     else if (main[i] == sub[j] && checking == false)
                     {
                         checking = true;
@@ -77,9 +117,13 @@ namespace ArrayPracticeP2
                 }
             }
             if (index > -1)
+            {
                 Console.WriteLine($"The sub-string ({sub}) begins in the main string ({main}) at index: {index}.");
+            }
             else
+            {
                 Console.WriteLine($"The sub-string ({sub}) does NOT exist in the main string ({main}).");
+            }
         }
 
         /// <summary>
@@ -98,14 +142,23 @@ namespace ArrayPracticeP2
                 for (int i = 0; i < x.Length; i++)
                 {
                     if (i == skip)
+                    {
                         continue;
+                    }
+
                     sum += x[i];
                 }
 
                 if (hSum < sum)
+                {
                     hSum = sum;
+                }
+
                 if (lSum > sum)
+                {
                     lSum = sum;
+                }
+
                 sum = 0;
                 skip++;
             }
@@ -120,9 +173,12 @@ namespace ArrayPracticeP2
         /// <param name="c"></param>
         public static void PrintArray(char[] c)
         {
-            Console.WriteLine("Exec: PrintArray");
+            //Console.WriteLine("Exec: PrintArray");
             foreach (char a in c)
-                Console.Write(a);
+            {
+                Console.Write($"{a} ");
+            }
+            Console.WriteLine();
         }
         /// <summary>
         /// Prints an integer array to the console window.
@@ -130,9 +186,12 @@ namespace ArrayPracticeP2
         /// <param name="x"></param>
         public static void PrintArray(int[] x)
         {
-            Console.WriteLine("Exec: PrintArray");
+            //Console.WriteLine("Exec: PrintArray");
             foreach (int a in x)
-                Console.Write(a);
+            {
+                Console.Write($"{a} ");
+            }
+            Console.WriteLine();
         }
         /// <summary>
         /// Prints a string array to the console window.
@@ -140,9 +199,12 @@ namespace ArrayPracticeP2
         /// <param name="s"></param>
         public static void PrintArray(string[] s)
         {
-            Console.WriteLine("Exec: PrintArray");
+            //Console.WriteLine("Exec: PrintArray");
             foreach (string a in s)
-                Console.Write(a);
+            {
+                Console.Write($"{a} ");
+            }
+            Console.WriteLine();
         }
     }
 }

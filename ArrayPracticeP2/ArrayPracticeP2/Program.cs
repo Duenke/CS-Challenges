@@ -6,6 +6,7 @@ namespace ArrayPracticeP2
     {
         static void Main(string[] args)
         {
+            #region MinMaxSum
             /*
            Given an integer array, calculate the minimum and maximum sum of all integers in the array except one integer.
 
@@ -37,7 +38,9 @@ namespace ArrayPracticeP2
             Console.ReadKey();
 
             Console.WriteLine("-----------------------------");
+            #endregion
 
+            #region SubStringCheck
             /*
             Given a "main" string and a "sub" string, check if the "sub" string exists in the "main" string, and print the index at witch it starts.
 
@@ -82,7 +85,9 @@ namespace ArrayPracticeP2
             Console.ReadKey();
 
             Console.WriteLine("-----------------------------");
+            #endregion
 
+            #region MaxString
             /*
             Given a sentence as a string, return the longest word in the string. Ignore special characters and spaces. If two words are the same length, return the first word.
 
@@ -120,7 +125,9 @@ namespace ArrayPracticeP2
             Console.ReadKey(); 
             
             Console.WriteLine("-----------------------------");
+            #endregion
 
+            #region VowelCount
             /*
             Given a sentence as a string, counts the number of vowels in the text.
 
@@ -152,7 +159,54 @@ namespace ArrayPracticeP2
             Console.ReadKey(); 
 
             Console.WriteLine("-----------------------------");
+            #endregion
 
+            #region GradingStudents
+            /*
+            Given an int[] of student grades, round the grades up to the next multiple of 5 if the original grade is within 2 points. Return a new int[].
+
+            Constraints:
+            - Grades range from 0 to 100.
+            - Only round up grades that are within 2 points.
+            - Leave other grades alone.
+            - Don't bother rounding grades that will still result in an F.
+
+            In-puts / Out-puts:
+            - int[] { 68, 72, 83, 99 } / int[] { 70, 72, 85, 100 }
+            - int[] { 0, 70, 48, 95 } / int[] { 0, 70, 48, 95 }
+
+            Logical Approach:
+            - Create our new int[].
+            - If grades will fail anyway, assign old value.
+            - If grades are not within 2 points of next multiple of 5, assign old value.
+            - If grade qualifies to round up, assign new value.
+            - Return new int[].
+            */
+
+            Console.WriteLine("GradingStudents");
+            Console.WriteLine("Given an int[] of student grades, round the grades up to the next multiple of 5 if the original grade is within 2 points.\n");
+
+            int[] oldGrades = new int[] { 68, 72, 83, 99 };
+            Console.WriteLine("The old grades are:");
+            PrintArray(oldGrades);
+            int[] newGrades = GradingStudents(oldGrades);
+            Console.WriteLine("The new grades are:");
+            PrintArray(newGrades);
+
+            oldGrades = new int[] { 0, 70, 48, 95, 98 };
+            Console.WriteLine("The old grades are:");
+            PrintArray(oldGrades);
+            newGrades = GradingStudents(oldGrades);
+            Console.WriteLine("The new grades are:");
+            PrintArray(newGrades);
+
+
+            Console.ReadKey(); 
+
+            Console.WriteLine("-----------------------------");
+            #endregion
+
+            #region 
             /*
             Given 
 
@@ -174,6 +228,8 @@ namespace ArrayPracticeP2
             Console.ReadKey(); 
 
             Console.WriteLine("-----------------------------"); */
+            #endregion
+
         }
     }
 }
