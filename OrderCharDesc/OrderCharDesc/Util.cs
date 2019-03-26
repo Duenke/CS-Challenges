@@ -28,7 +28,7 @@ namespace OrderCharDesc
             {
                 objArr[i++] = kvp;
             }
-            // Sort the KVPs by descinding frequency.
+            // Sort the KVPs by descending frequency.
             CharCompare monsterTruck = new CharCompare();
             Array.Sort(objArr, monsterTruck);
             // Migrate the KVPs to a one dimensional StringBuilder.
