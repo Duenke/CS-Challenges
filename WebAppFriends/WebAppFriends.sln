@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationDink", "WebApplicationDink\WebApplicationDink.csproj", "{67DEC81A-6E17-49EF-B5C3-2904F216E596}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppFriends", "WebAppFriends\WebAppFriends.csproj", "{A918E3A9-A0A4-498D-B3A8-84567E4183F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{67DEC81A-6E17-49EF-B5C3-2904F216E596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67DEC81A-6E17-49EF-B5C3-2904F216E596}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67DEC81A-6E17-49EF-B5C3-2904F216E596}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67DEC81A-6E17-49EF-B5C3-2904F216E596}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A918E3A9-A0A4-498D-B3A8-84567E4183F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A918E3A9-A0A4-498D-B3A8-84567E4183F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A918E3A9-A0A4-498D-B3A8-84567E4183F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A918E3A9-A0A4-498D-B3A8-84567E4183F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7EBE1B75-FF6B-43E6-9886-54D76673E8CF}
+		SolutionGuid = {B2880164-EA36-4222-837D-C83F92852722}
 	EndGlobalSection
 EndGlobal

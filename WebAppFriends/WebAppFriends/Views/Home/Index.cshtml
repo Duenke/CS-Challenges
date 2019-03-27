@@ -1,0 +1,35 @@
+﻿@model IEnumerable<WebAppFriends.Models.Person>
+@{ Layout = null; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>WebAppFriends</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body class="p-1">
+    <h3 class="text-center">Friends List</h3>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr><td>FirstName</td><td>LastName</td><td>Gender</td><td>Age</td></tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.FirstName</td>
+                    <td>@p.LastName</td>
+                    <td>@p.Gender</td>
+                    <td>@p.Age</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="text-center">
+        <a class="btn btn-primary" asp-action="AddFriend">
+            Make A New Friend
+        </a>
+    </div>
+</body>
+</html>

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace WebApplicationDink
+namespace WebAppFriends
 {
     public class Startup
     {
@@ -25,7 +25,8 @@ namespace WebApplicationDink
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            //app.UseBrowserLink();
+            app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
         }
     }
