@@ -21,7 +21,9 @@ namespace LinqExercises
                         select num;
 
             foreach (var v in query)
+            {
                 Console.Write($"{v} ");
+            }
 
             Console.WriteLine("---------------------------------------------");
 
@@ -29,11 +31,13 @@ namespace LinqExercises
             int[] n2 = { 1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14 };
 
             var query2 = from num in n2
-                        where (num > 0 && num < 12)
-                        select num;
+                         where (num > 0 && num < 12)
+                         select num;
 
             foreach (var v in query2)
+            {
                 Console.Write($"{v} ");
+            }
 
             Console.WriteLine("---------------------------------------------");
 
@@ -45,7 +49,9 @@ namespace LinqExercises
                          select num;
 
             foreach (int i in query3)
+            {
                 Console.WriteLine($"Number: {i}, SqrNum: {i * i}");
+            }
 
             Console.WriteLine("---------------------------------------------");
 
@@ -68,8 +74,10 @@ namespace LinqExercises
             var query4 = from num in n4
                          group num by num;
 
-            foreach(var group in query4)
+            foreach (var group in query4)
+            {
                 Console.WriteLine($"Int [{group.Key}] freq is [{group.Count()}]");
+            }
 
             Console.WriteLine("---------------------------------------------");
 
@@ -79,8 +87,10 @@ namespace LinqExercises
             var query5 = from chr in s5
                          group chr by chr;
 
-            foreach(var group in query5)
+            foreach (var group in query5)
+            {
                 Console.WriteLine($"Char [{group.Key}] freq is [{group.Count()}]");
+            }
 
             Console.WriteLine("---------------------------------------------");
 
@@ -91,7 +101,9 @@ namespace LinqExercises
                          select day;
 
             foreach (var v in query6)
+            {
                 Console.WriteLine(v);
+            }
 
             Console.WriteLine("---------------------------------------------");
 
@@ -103,8 +115,10 @@ namespace LinqExercises
             Console.WriteLine("Int  Freq    Product");
             Console.WriteLine("--------------------");
 
-            foreach(var group in query7)
+            foreach (var group in query7)
+            {
                 Console.WriteLine($"{group.Key}     {group.Count()}         {group.Key * group.Count()}");
+            }
 
             Console.WriteLine("---------------------------------------------");
 
@@ -113,7 +127,10 @@ namespace LinqExercises
 
             Console.WriteLine("The cities are:");
             foreach (var v in s8)
+            {
                 Console.Write($"{v}, ");
+            }
+
             Console.Write("Inter starting character for the city: ");
             string start = Console.ReadLine().ToUpper();
             Console.Write("Inter ending character for the city: ");
@@ -144,8 +161,64 @@ namespace LinqExercises
 
             Console.WriteLine("---------------------------------------------");
 
-            Console.WriteLine("\nPrint ");
+            Console.WriteLine("\nPrint the top 'n' values of an array.");
+            int[] n9 = { 5, 13, 4, 21, 2, 6, 9, 50 };
 
+            Console.Write("Enter the number of values to display, 'n': ");
+            int n = int.Parse(Console.ReadLine());
+            var query9 = (from num in n9
+                         orderby num descending
+                         select num).Take(n);
+
+
+            Console.Write($"\nThe top {n} values are: ");
+            foreach(var v in query9)
+            {
+                Console.Write($"{v} ");
+            }
+
+            Console.WriteLine("---------------------------------------------");
+
+            Console.WriteLine("\nPrint the UPPERCASE words.");
+            string s10 = "my name is JACOB AGUSTIN BARQUET SALAZAR DANGER DUENKE.";
+
+            var query10 = from chr in s10
+                          where chr > 64 && chr < 91
+                          select chr;
+
+            foreach (var v in query10)
+                Console.Write($"{v} ");
+            Console.WriteLine();
+
+            string[] s11 = s10.Split(' ');
+
+            var query11 = from word in s11
+                          where string.Equals(word, word.ToUpper())
+                          select word;
+
+            foreach (var v in query11)
+                Console.Write($"{v} ");
+            Console.WriteLine();
+
+            Console.WriteLine("---------------------------------------------");
+
+            Console.WriteLine("\nPrint the string after deleting the specified character.");
+            string s12 = "The credit belongs to the man who is actually in the arena.";
+
+            Console.WriteLine($"Original String:" +
+                $"\n{s12}");
+            Console.Write("\nEnter one character to remove: ");
+            string s = Console.ReadLine();
+            char c = s[0];
+
+            var query12 = from chr in s12
+                          where chr != c
+                          select chr;
+
+            Console.WriteLine("\nUpdated String:");
+            foreach(var v in query12)
+                Console.Write(v);
+            Console.WriteLine();
         }
     }
 }
