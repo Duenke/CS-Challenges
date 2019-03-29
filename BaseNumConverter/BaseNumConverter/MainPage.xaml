@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="BaseNumConverter.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BaseNumConverter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="Gray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="oldNum" Grid.Column="0" Grid.Row="0" PlaceholderText="Enter Number To Convert" Windows10version1809:CornerRadius="3" FontSize="40" FontWeight="Bold" TextAlignment="DetectFromContent" />
+
+        <Button x:Name="convert" Content="CONVERT" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Windows10version1809:CornerRadius="10" Click="ConvertNum" FontSize="40" FontWeight="Bold"/>
+
+        <TextBox x:Name="newNum" Grid.Column="0" Grid.Row="2" PlaceholderText="Newly converted Number" Windows10version1809:CornerRadius="3" FontSize="40" FontWeight="Bold" TextAlignment="DetectFromContent"/>
+
+        <TextBlock Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Text="Convert A Number To Another Base Notation" TextWrapping="WrapWholeWords" TextAlignment="Center" FontSize="40" FontWeight="Bold"/>
+
+        <ListView Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="center" HorizontalAlignment="Center">
+            <RadioButton x:Name="Dec_2_Bin" Content="Dec 2 Bin" FontSize="36" Height="auto" Width="auto" FontWeight="Bold"/>
+
+            <RadioButton x:Name="Dec_2_Oct" Content="Dec 2 Oct" FontSize="36" Height="auto" Width="auto" FontWeight="Bold"/>
+
+            <RadioButton x:Name="Bin_2_Dec" Content="Bin 2 Dec" FontSize="36" Height="auto" Width="auto" FontWeight="Bold"/>
+
+            <RadioButton x:Name="Bin_2_Oct" Content="Bin 2 Oct" FontSize="36" Height="auto" Width="auto" FontWeight="Bold"/>
+
+            <RadioButton x:Name="Oct_2_Dec" Content="Oct 2 Dec" FontSize="36" Height="auto" Width="auto" FontWeight="Bold"/>
+
+            <RadioButton x:Name="Oct_2_Bin" Content="Oct 2 Bin" FontSize="36" Height="auto" Width="auto" FontWeight="Bold"/>
+        </ListView>
+    </Grid>
+</Page>
