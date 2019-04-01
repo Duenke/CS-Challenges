@@ -1,19 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -29,6 +17,11 @@ namespace BaseNumConverter
             this.InitializeComponent();
         }
 
+        /// <summary>
+        /// Executes the BaseNumConverter methods specified by the user. Selection based off radial button selected.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ConvertNum(object sender, RoutedEventArgs e)
         {
             try
@@ -116,6 +109,11 @@ namespace BaseNumConverter
             }
         }
 
+        /// <summary>
+        /// Converts an Octal(base 8) number to a Binary(base 2) number.
+        /// </summary>
+        /// <param name="text">Octal number as a string.</param>
+        /// <returns>Binary number as a string.</returns>
         private string Oct2Bin(string text)
         {
             // Variables.
@@ -140,6 +138,11 @@ namespace BaseNumConverter
             return newSB.ToString();
         }
 
+        /// <summary>
+        /// Converts a Binary(base 2) number to an Octal(base 8) number.
+        /// </summary>
+        /// <param name="text">Binary number as a string.</param>
+        /// <returns>Octal number as a string.</returns>
         private string Bin2Oct(string text)
         {
             // Long variables required due to length of binary numbers.
@@ -164,6 +167,11 @@ namespace BaseNumConverter
             return newSB.ToString();
         }
 
+        /// <summary>
+        /// Converts a Binary(base 2) number to a Decimal(base 10) number.
+        /// </summary>
+        /// <param name="text">Binary number as a string.</param>
+        /// <returns>Decimal number as a string.</returns>
         private string Bin2Dec(string text)
         {
             // Long variables required due to length of binary numbers.
@@ -188,6 +196,11 @@ namespace BaseNumConverter
             return newNum.ToString();
         }
 
+        /// <summary>
+        /// Converts an Octal(base 8) number to a Decimal(base 10) number.
+        /// </summary>
+        /// <param name="text">Octal number as a string.</param>
+        /// <returns>Decimal number as a string.</returns>
         private string Oct2Dec(string text)
         {
             // Variables.
@@ -212,6 +225,11 @@ namespace BaseNumConverter
             return newNum.ToString();
         }
 
+        /// <summary>
+        /// Converts a Decimal(base 10) number to an Octal(base 8) number.
+        /// </summary>
+        /// <param name="text">Decimal number as a string.</param>
+        /// <returns>Octal number as a string.</returns>
         private string Dec2Oct(string text)
         {
             // Variables.
@@ -229,6 +247,11 @@ namespace BaseNumConverter
             return newSB.ToString();
         }
 
+        /// <summary>
+        /// Converts a Decimal(base 10) number to a Binary(base 2) number.
+        /// </summary>
+        /// <param name="text">Decimal number as a string.</param>
+        /// <returns>Binary number as a string.</returns>
         private string Dec2Bin(string text)
         {
             // Variables.
