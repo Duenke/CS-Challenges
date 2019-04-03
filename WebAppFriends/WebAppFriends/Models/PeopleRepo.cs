@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using WebAppFriends.Models;
 
 namespace WebAppFriends.Models
@@ -25,7 +25,9 @@ namespace WebAppFriends.Models
                 new Person { FirstName = "Malachi", LastName = "Evans", Gender = "Male", Age = 28}
             };
             foreach (var p in initialFriends)
+            {
                 AddFriend(p);
+            }
         }
 
         public void AddFriend(Person p)

@@ -1,38 +1,30 @@
 ﻿@model WebAppFriends.Models.Person
-@{ Layout = null; }
+@{Layout = null;}
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Make A Friend</title>
-    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>SearchFriends</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body class="p-2">
-    <h3 class="text-center">Make A Friend</h3>
-    <form asp-action="AddFriend" method="post">
+    <h3 class="text-center">Search For A Friend</h3>
+    <form asp-action="SearchFriends" method="post">
         <div class="form-group">
             <label asp-for="FirstName">First Name:</label>
             <input asp-for="FirstName" class="form-control" />
         </div>
-        <div class="form-group">
+        @*<div class="form-group">
             <label asp-for="LastName">Last Name:</label>
             <input asp-for="LastName" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="Gender">Gender:</label>
-            <input asp-for="Gender" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="Age">Age:</label>
-            <input asp-for="Age" class="form-control" />
-        </div>
+        </div>*@
         <div class="text-center">
             <button type="submit" class="btn btn-primary">
-                Make Friend
+                Search
             </button>
             <a asp-action="Index" class="btn btn-secondary">
-                Be A Loner
+                Cancel
             </a>
         </div>
     </form>

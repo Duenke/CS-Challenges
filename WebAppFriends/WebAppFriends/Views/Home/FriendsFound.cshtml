@@ -1,15 +1,15 @@
 ﻿@model IEnumerable<WebAppFriends.Models.Person>
-@{ Layout = null; }
+@{Layout = null;}
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>WebAppFriends</title>
-    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>FriendsFound</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body class="p-1">
-    <h3 class="text-center">Friends List</h3>
+    <h3 class="text-center">Friends Found In Search</h3>
     <table class="table table-bordered table-striped">
         <thead>
             <tr><td>FirstName</td><td>LastName</td><td>Gender</td><td>Age</td></tr>
@@ -27,11 +27,11 @@
         </tbody>
     </table>
     <div class="text-center">
-        <a class="btn btn-primary" asp-action="AddFriend">
-            Make A New Friend
+        <a class="btn btn-primary" asp-action="SearchFriends">
+            New Search
         </a>
-        <a asp-action="SearchFriends" class="btn btn-secondary">
-            Search Friends
+        <a class="btn btn-secondary" asp-action="Index">
+            Friends List
         </a>
     </div>
 </body>

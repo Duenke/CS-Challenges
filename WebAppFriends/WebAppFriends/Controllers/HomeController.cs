@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using WebAppFriends.Models;
 
 namespace WebAppFriends.Controllers
@@ -21,6 +21,16 @@ namespace WebAppFriends.Controllers
         {
             controllerRepo.AddFriend(p);
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult SearchFriends() => View();
+
+        [HttpPost]
+        public IActionResult SearchFriends(string firstName)
+        {
+            IEnumerable<Person> found = controllerRepo.People.Select(p => p).Where(p => p.FirstName == firstName);
+            return View("FriendsFound", found);
         }
     }
 }
