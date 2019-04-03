@@ -12,7 +12,8 @@
     <h3 class="text-center">Search For A Friend</h3>
     <form asp-action="SearchFriends" method="post">
         <div class="form-group">
-            <label asp-for="FirstName">First Name:</label>
+            @* idk why, but this FistName and the action method FirstName parameter are critical *@
+            <label asp-for="FirstName">Search By: First Name, Last Name, Gender, or Age</label>
             <input asp-for="FirstName" class="form-control" />
         </div>
         @*<div class="form-group">
