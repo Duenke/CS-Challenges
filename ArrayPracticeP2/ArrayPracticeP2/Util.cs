@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ArrayPracticeP2
 {
@@ -28,6 +29,7 @@ namespace ArrayPracticeP2
                     curvedGrades[i] = grades[i];
                 }
             }
+
             return curvedGrades;
         }
 
@@ -41,15 +43,9 @@ namespace ArrayPracticeP2
             char[] vowels = new char[] { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
             int vowelCount = 0;
             for (int i = 0; i < sentence.Length; i++)
-            {
                 for (int j = 0; j < vowels.Length; j++)
-                {
                     if (sentence[i] == vowels[j])
-                    {
                         vowelCount++;
-                    }
-                }
-            }
 
             return vowelCount;
         }
@@ -65,12 +61,8 @@ namespace ArrayPracticeP2
             string max = arr[0];
 
             for (int i = 0; i < arr.Length; i++)
-            {
                 if (max.Length < arr[i].Length)
-                {
                     max = arr[i];
-                }
-            }
 
             return max;
         }
@@ -117,13 +109,9 @@ namespace ArrayPracticeP2
                 }
             }
             if (index > -1)
-            {
                 Console.WriteLine($"The sub-string ({sub}) begins in the main string ({main}) at index: {index}.");
-            }
             else
-            {
                 Console.WriteLine($"The sub-string ({sub}) does NOT exist in the main string ({main}).");
-            }
         }
 
         /// <summary>
@@ -142,22 +130,16 @@ namespace ArrayPracticeP2
                 for (int i = 0; i < x.Length; i++)
                 {
                     if (i == skip)
-                    {
                         continue;
-                    }
 
                     sum += x[i];
                 }
 
                 if (hSum < sum)
-                {
                     hSum = sum;
-                }
 
                 if (lSum > sum)
-                {
                     lSum = sum;
-                }
 
                 sum = 0;
                 skip++;
@@ -168,42 +150,14 @@ namespace ArrayPracticeP2
         }
 
         /// <summary>
-        /// Prints a character array to the console window.
+        /// Prints an array to the console window.
         /// </summary>
         /// <param name="c"></param>
-        public static void PrintArray(char[] c)
+        public static void PrintArray<T>(IEnumerable<T> array)
         {
-            //Console.WriteLine("Exec: PrintArray");
-            foreach (char a in c)
-            {
-                Console.Write($"{a} ");
-            }
-            Console.WriteLine();
-        }
-        /// <summary>
-        /// Prints an integer array to the console window.
-        /// </summary>
-        /// <param name="x"></param>
-        public static void PrintArray(int[] x)
-        {
-            //Console.WriteLine("Exec: PrintArray");
-            foreach (int a in x)
-            {
-                Console.Write($"{a} ");
-            }
-            Console.WriteLine();
-        }
-        /// <summary>
-        /// Prints a string array to the console window.
-        /// </summary>
-        /// <param name="s"></param>
-        public static void PrintArray(string[] s)
-        {
-            //Console.WriteLine("Exec: PrintArray");
-            foreach (string a in s)
-            {
-                Console.Write($"{a} ");
-            }
+            // Console.WriteLine("Exec: PrintArray");
+            foreach (var v in array)
+                Console.Write($"{v} ");
             Console.WriteLine();
         }
     }

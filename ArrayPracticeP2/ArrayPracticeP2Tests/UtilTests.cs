@@ -12,14 +12,38 @@ namespace ArrayPracticeP2.Tests
     public class UtilTests
     {
         [TestMethod()]
-        public void MaxStringTest_ReturnsLove()
+        public void GradingStudentsTest_Expected()
         {
-            //arrange
-            string s = "I Love Dogs";
-            //act
-            string result = Util.MaxString(s);
-            //assert
-            Assert.AreEqual(result, "Love");
+            // Arrange
+            int[] input = new int[] { 64, 74, 83, 92, 99 };
+            int[] output = new int[] { 64, 75, 85, 92, 100 };
+            // Act
+            int[] result = Util.GradingStudents(input);
+            // Assert - cannot compare arrays literally, so converted to strings.
+            Assert.AreEqual(output.ToString(), result.ToString());
+        }
+
+        [TestMethod()]
+        public void VowelCountTest_Expected()
+        {
+            // Arrange
+            string input = "abbccdddeeee";
+            int output = 5;
+            // Act
+            int result = Util.VowelCount(input);
+            // Assert
+            Assert.AreEqual(output, result);
+        }
+
+        [TestMethod()]
+        public void MaxStringTest_Expected()
+        {
+            string input = "Hello world, my name is Charles Philip Arthur George Mountbatten-Windsor";
+            string output = "Mountbatten-Windsor";
+            // Act
+            string result = Util.MaxString(input);
+            // Assert
+            Assert.AreEqual(output, result);
         }
     }
 }

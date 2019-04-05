@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ArrayPracticeP1
 {
-    class Program : Util
+    internal class Program : Util
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            #region CheckPalindrome
             /*
             Given a string, check to see if it is a palindrome. Return true or false.
 
@@ -43,7 +40,9 @@ namespace ArrayPracticeP1
             Console.ReadKey();
 
             Console.WriteLine("-----------------------------");
+            #endregion
 
+            #region GetMin
             /*
             Given an integer array, find the smallest integer in the array.
 
@@ -70,14 +69,19 @@ namespace ArrayPracticeP1
             int[] b = new int[] { 11, 255, 34, 77, 8 };
             int[] c = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
+            PrintArray(a);
             Console.WriteLine($"The smallest value in int[] a is: {GetMin(a)}.");
+            PrintArray(b);
             Console.WriteLine($"The smallest value in int[] b is: {GetMin(b)}.");
+            PrintArray(c);
             Console.WriteLine($"The smallest value in int[] c is: {GetMin(c)}.");
 
             Console.ReadKey();
 
             Console.WriteLine("-----------------------------");
+            #endregion
 
+            #region GetMax
             /*
             Given an integer array, find the largest integer in the array.
 
@@ -104,14 +108,19 @@ namespace ArrayPracticeP1
             b = new int[] { 11, 255, 34, 77, 8 };
             c = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
+            PrintArray(a);
             Console.WriteLine($"The largest value in int[] a is: {GetMax(a)}.");
+            PrintArray(b);
             Console.WriteLine($"The largest value in int[] b is: {GetMax(b)}.");
+            PrintArray(c);
             Console.WriteLine($"The largest value in int[] c is: {GetMax(c)}.");
 
             Console.ReadKey();
 
             Console.WriteLine("-----------------------------");
+            #endregion
 
+            #region PickTeams
             /*
             Given a character array of any size, randomly populate it with half A and half Z characters.
 
@@ -142,6 +151,9 @@ namespace ArrayPracticeP1
             PrintArray(players);
 
             Console.ReadKey();
+
+            Console.WriteLine("-----------------------------");
+            #endregion
         }
     }
 }

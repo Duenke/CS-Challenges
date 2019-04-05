@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ArrayPracticeP1
 {
@@ -15,7 +12,7 @@ namespace ArrayPracticeP1
         /// <returns>char[]</returns>
         public static char[] PickTeams(int gameSize)
         {
-            Console.WriteLine("Exec: PickTeams");
+            // Console.WriteLine("Exec: PickTeams");
             char[] x = new char[gameSize];
             int alpha = x.Length / 2;
             int zulu = x.Length / 2;
@@ -52,7 +49,7 @@ namespace ArrayPracticeP1
         /// <returns>int</returns>
         public static int GetMax(int[] x)
         {
-            Console.WriteLine("Exec: GetMax");
+            // Console.WriteLine("Exec: GetMax");
             int max = x[0];
             for (int i = 0; i < x.Length; i++)
                 if (x[i] > max)
@@ -67,7 +64,7 @@ namespace ArrayPracticeP1
         /// <returns>int</returns>
         public static int GetMin(int[] x)
         {
-            Console.WriteLine("Exec: GetMin");
+            // Console.WriteLine("Exec: GetMin");
             int min = x[0];
             for (int i = 0; i < x.Length; i++)
                 if (x[i] < min)
@@ -82,7 +79,7 @@ namespace ArrayPracticeP1
         /// <returns>bool</returns>
         public static bool CheckPalindrome(string s)
         {
-            Console.WriteLine("Exec: CheckPalindrome");
+            // Console.WriteLine("Exec: CheckPalindrome");
             for (int i = 0, j = s.Length - 1; i < j; i++, j--) //Checks both sides of a single word at the same time going inward.
             {
                 if (s[i] != s[j])
@@ -92,34 +89,15 @@ namespace ArrayPracticeP1
         }
 
         /// <summary>
-        /// Prints a character array to the console window.
+        /// Prints an array to the console window.
         /// </summary>
         /// <param name="c"></param>
-        public static void PrintArray(char[] c)
+        public static void PrintArray<T>(IEnumerable<T> array)
         {
-            Console.WriteLine("Exec: PrintArray");
-            foreach (char a in c)
-                Console.Write(a);
-        }
-        /// <summary>
-        /// Prints an integer array to the console window.
-        /// </summary>
-        /// <param name="x"></param>
-        public static void PrintArray(int[] x)
-        {
-            Console.WriteLine("Exec: PrintArray");
-            foreach (int a in x)
-                Console.Write(a);
-        }
-        /// <summary>
-        /// Prints a string array to the console window.
-        /// </summary>
-        /// <param name="s"></param>
-        public static void PrintArray(string[] s)
-        {
-            Console.WriteLine("Exec: PrintArray");
-            foreach (string a in s)
-                Console.Write(a);
+            // Console.WriteLine("Exec: PrintArray");
+            foreach (var v in array)
+                Console.Write($"{v} ");
+            Console.WriteLine();
         }
     }
 }
