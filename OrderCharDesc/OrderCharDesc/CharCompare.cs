@@ -12,23 +12,15 @@ namespace OrderCharDesc
             KeyValuePair<char, int> b = (KeyValuePair<char, int>)y;
             // Compare the Int Values and Char Keys for sorting.
             if (a.Value < b.Value)
-            {
                 return 1;
-            }
             else if (a.Value > b.Value)
-            {
                 return -1;
-            }
             else if (a.Value == b.Value)
             {
                 if (a.Key < b.Key)
-                {
                     return -1;
-                }
                 else
-                {
                     return 1;
-                }
             }
             return 0;
         }

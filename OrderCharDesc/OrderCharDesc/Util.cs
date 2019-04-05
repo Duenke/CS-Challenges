@@ -10,16 +10,17 @@ namespace OrderCharDesc
         {
             // Assign each character and frequency as a KVP.
             Dictionary<char, int> charDict = new Dictionary<char, int>();
+            if (string.IsNullOrEmpty(unSorted))
+            {
+                return "The input is null or empty.";
+            }
+
             foreach (char c in unSorted)
             {
                 if (charDict.ContainsKey(c))
-                {
                     charDict[c]++;
-                }
                 else
-                {
                     charDict.Add(c, 1);
-                }
             }
             // Migrate the KVPs to an Array for manipulation.
             int i = 0;
@@ -33,7 +34,7 @@ namespace OrderCharDesc
             Array.Sort(objArr, monsterTruck);
             // Migrate the KVPs to a one dimensional StringBuilder.
             StringBuilder charSB = new StringBuilder();
-            foreach(KeyValuePair<char, int> kvp in objArr)
+            foreach (KeyValuePair<char, int> kvp in objArr)
             {
                 int repeat = kvp.Value;
                 while (repeat > 0)
@@ -43,8 +44,7 @@ namespace OrderCharDesc
                 }
             }
             // Finally, convert the StringBuilder to a regular String for return.
-            string sorted = charSB.ToString();
-            return sorted;
+            return charSB.ToString();
         }
     }
 }
