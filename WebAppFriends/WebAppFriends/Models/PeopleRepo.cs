@@ -17,7 +17,7 @@ namespace WebAppFriends.Models
         // Class constructor; Initializes and adds beginning set of people.
         public PeopleRepo()
         {
-            var initialFriends = new[]
+            Person[] initialFriends = new[]
             {
                 new Person { FirstName = "Jacob", LastName = "Duenke", Gender = "Male", Age = 26},
                 new Person { FirstName = "Kindra", LastName = "Bilodeau", Gender = "Female", Age = 26},
@@ -29,7 +29,7 @@ namespace WebAppFriends.Models
                 new Person { FirstName = "Grayson", LastName = "Drew", Gender = "Male", Age = 25},
                 new Person { FirstName = "Evan", LastName = "Drew", Gender = "Male", Age = 23},
             };
-            foreach (var p in initialFriends)
+            foreach (Person p in initialFriends)
             {
                 AddFriend(p);
             }
@@ -37,7 +37,7 @@ namespace WebAppFriends.Models
 
         public void AddFriend(Person p)
         {
-            // Contatenated FirstName & LastName as the Key to prevent duplicate people.
+            // Concatenated FirstName & LastName as the Key to prevent duplicate people.
             peopleDict.Add(p.FirstName + p.LastName, p);
         }
     }
