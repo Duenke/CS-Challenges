@@ -112,13 +112,12 @@ namespace CipherCode
             {
                 int c = encCont[i];
                 int key = cleanKey[i % cleanKey.Length] - 64;
-                int contKey = encCont[j] - 64;
                 int decChar;
                 if (i < cleanKey.Length)
                     decChar = c - key;
                 else
                 {
-                    decChar = c - contKey;
+                    decChar = c - (decChars[j] - 64);
                     j++;
                 }
                 if (decChar < 65)
